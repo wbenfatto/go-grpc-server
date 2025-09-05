@@ -18,7 +18,3 @@ Thumbs.db
 # Logs and temp files
 *.log
 *.tmp
-
-# Proto build cache (if any)
-*.pb.go
-

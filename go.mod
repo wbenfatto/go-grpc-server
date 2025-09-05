@@ -1,4 +1,4 @@
-module github.com/wbenfatto/go-grpc-server
+module go-grpc-server
 
 go 1.25
 
