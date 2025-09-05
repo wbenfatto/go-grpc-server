@@ -2,7 +2,7 @@ package main
 
 import (
 	"context"
-	"go-grpc-server/hello"
+	"github.com/wbenfatto/go-grpc-server/hello"
 	"log"
 	"net"
 
