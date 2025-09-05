@@ -1,6 +1,5 @@
 module github.com/wbenfatto/go-grpc-server
 
-
 go 1.25
 
 require (
