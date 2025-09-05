@@ -9,7 +9,7 @@ on:
 
 env:
   REGISTRY: ghcr.io
-  IMAGE_NAME: go-gin-grpc-server
+  IMAGE_NAME: go-grpc-server
 
 jobs:
   build:
