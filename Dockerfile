@@ -7,6 +7,7 @@ WORKDIR /app
 
 COPY . .
 
+RUN apk add --no-cache git
 RUN go mod tidy
 RUN CGO_ENABLED=0 GOOS=$TARGETOS GOARCH=$TARGETARCH go build -ldflags="-s -w" -o main .
 
