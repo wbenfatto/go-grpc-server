@@ -14,14 +14,14 @@ COPY . .
 
 RUN --mount=type=cache,target=/go/pkg/mod \
     --mount=type=cache,target=/root/.cache/go-build \
-    CGO_ENABLED=0 GOOS=$TARGETOS GOARCH=$TARGETARCH go build -ldflags="-s -w" -o main
+    CGO_ENABLED=0 GOOS=$TARGETOS GOARCH=$TARGETARCH go build -ldflags="-s -w" -o server
 
 FROM --platform=$TARGETOS/$TARGETARCH gcr.io/distroless/static-debian12:latest
 
 WORKDIR /app
 
-COPY --from=builder /app/main .
+COPY --from=builder /app/server .
 
 EXPOSE 50051
 
-CMD ["/app/main"]
+CMD ["/app/server"]
