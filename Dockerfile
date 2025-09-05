@@ -7,6 +7,7 @@ WORKDIR /app
 
 COPY . .
 
+RUN go mod tidy
 RUN CGO_ENABLED=0 GOOS=$TARGETOS GOARCH=$TARGETARCH go build -ldflags="-s -w" -o main .
 
 FROM --platform=$TARGETOS/$TARGETARCH gcr.io/distroless/static-debian12:latest
