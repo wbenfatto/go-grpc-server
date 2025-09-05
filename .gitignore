@@ -1,0 +1,24 @@
+# Go build outputs
+client
+*.exe
+*.out
+*.test
+
+# Dependency directories
+vendor/
+
+# OS files
+.DS_Store
+Thumbs.db
+
+# IDE/editor files
+.vscode/
+.idea/
+
+# Logs and temp files
+*.log
+*.tmp
+
+# Proto build cache (if any)
+*.pb.go
+
